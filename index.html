@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <aside class="aside">
-        <h1 class="Instructions">
+        <h1 class="instructions">
           Instructions
         </h1>
         <p class="paragraph-style">
@@ -21,7 +21,8 @@
         </p>
       </aside>
       <main class="main">
-            <h1>Hang Man</h1>
+        <h1>Hang Man</h1>
+        
       </main>
       <nav class="nav">
         <button class="reset-game">
@@ -33,57 +34,58 @@
         </button>
       </nav>
 
-      <div class="letter-output-field">
-
-      </div>
-    </div>
-  
-      <div id="alphabet">
-      <br>
-        <ul class="letters">
-          <li>A</li>
-          <li>B</li>
-          <li>C</li>
-          <li>D</li>
-          <li>E</li>
-          <li>F</li>
-          <li>G</li>
-          <li>H</li>
-          <li>I</li>
-          <li>J</li>
-          <li>K</li>
-          <li>L</li>
-          <li>M</li>
-          <li>N</li>
-          <li>O</li>
-          <li>P</li>
-          <li>Q</li>
-          <li>R</li>
-          <li>S</li>
-          <li>T</li>
-          <li>U</li>
-          <li>V</li>
-          <li>W</li>
-          <li>X</li>
-          <li>Y</li>
-          <li>Z</li>
+      <div class="letter-output-field"></div>
+      <div id="input">
+        <p class="lives-message">
+          You have <span class="lives-left">""</span> lives left
+        </p>
+        <ul class="my-word">
+          <li>_</li>
+          <li>_</li>
+          <li>_</li>
+          <li>_</li>
+          <li>_</li>
+          <li>_</li>
         </ul>
       </div>
+    </div>
 
-      <p class="lives-message">You have <span class="lives-left">""</span> lives left</p>
-          <ul class="my-word">
-              <li>_</li>
-              <li>_</li>
-              <li>_</li>
-              <li>_</li>
-              <li>_</li>
-              <li>_</li>
-          </ul>
+    <div id="alphabet">
+      <br />
+      <ul class="letters">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+        <li>F</li>
+        <li>G</li>
+        <li>H</li>
+        <li>I</li>
+        <li>J</li>
+        <li>K</li>
+        <li>L</li>
+        <li>M</li>
+        <li>N</li>
+        <li>O</li>
+        <li>P</li>
+        <li>Q</li>
+        <li>R</li>
+        <li>S</li>
+        <li>T</li>
+        <li>U</li>
+        <li>V</li>
+        <li>W</li>
+        <li>X</li>
+        <li>Y</li>
+        <li>Z</li>
+      </ul>
+    </div>
 
-      <footer class="footer">
-        <p class="social-media-links"></p>
-      </footer>
-    
+    <footer class="footer">
+      <p class="social-media-links"></p>
+    </footer>
+
     <script src="/script/script.js"></script>
   </body>
 </html>
