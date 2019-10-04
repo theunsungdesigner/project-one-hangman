@@ -5,17 +5,27 @@ let resetButton =  document.body.querySelector('.reset-game');
 let nextWordButton = document.body.getElementsByClassName('next-word');
 let userChoice = document.body.querySelector('.letters')
 
+let secretWord = ['ganondorf', 'zelda', 'link', 'pikachu', 'ryu',
+                'crash', 'mario','luigi', 'mega man','sonic','zero'];
+
+
 let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
           'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
           't', 'u', 'v', 'w', 'x', 'y', 'z'];
 //produces alphabet on screen
     for(let i =0; i<alphabet.length; i++) {
         $('.letters').append(`<li>${alphabet[i]}</li>`)
+        $('li').addClass('list');
+        // document.body.querySelector('.list').innerHTML = alphabet[i];
+        // console.log( alphabet[i])
+
+        
+        
     }
 //includes() to evaluate boolean if the string contains a letter
     const userChooseLetter = (e) => {
-      var letterChosen = (e.target)
-      console.log(letterChosen)
+    let letterChosen =(e.target).innerHTML
+    return letterChosen
     }
 
     const resetGame = ()  => {
@@ -24,6 +34,7 @@ let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
 
     resetButton.addEventListener('click', resetGame)
     userChoice.addEventListener('click', userChooseLetter )
+    
 
 
 
