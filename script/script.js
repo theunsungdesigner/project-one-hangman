@@ -5,7 +5,6 @@ window.onload = function() {
   let nextWordButton = document.body.getElementsByClassName("next-word");
   let userChoice = document.body.querySelector(".letters");
 
-   
   let secretWord = [
     "zelda",
     "link",
@@ -18,15 +17,19 @@ window.onload = function() {
     "sonic",
     "zero"
   ];
+  let wordInPlay = "";
+  const randomWord = () => {
+    wordInPlay = secretWord[Math.floor(Math.random() * secretWord.length)];
+    console.log(wordInPlay);
+  };
+  randomWord();
 
-  let randomWord = () => {
-    randomWord =secretWord[Math.floor(Math.random()*secretWord.length)];
-    return randomWord;
- }
- 
- console.log(randomWord())
-
-//   .split('')
+  let wordInPlayArr = wordInPlay.split("");
+  wordInPlayArr.forEach(letter => {
+    $(".my-word").append(`<li>${letter}</li>`);
+  });
+  //  let displayRandomWord = $(".my-word").append(`<li></li>`)
+  //  console.log(displayRandomWord)
 
   let alphabet = [
     "a",
@@ -66,7 +69,7 @@ window.onload = function() {
   //includes() to evaluate boolean if the string contains a letter
   const userChooseLetter = e => {
     let letterChosen = e.target.innerHTML;
-    console.log(letterChosen)
+    console.log(letterChosen);
     // if (letterChosen === secretWord) {
     //     console.log('true')
     // }
