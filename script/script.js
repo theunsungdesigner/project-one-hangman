@@ -1,41 +1,81 @@
-window.onload = function () {
-    //imported jquery use .append() create li elements
-let hangManState = document.body.querySelector('.hangman-state');
-let resetButton =  document.body.querySelector('.reset-game');
-let nextWordButton = document.body.getElementsByClassName('next-word');
-let userChoice = document.body.querySelector('.letters')
+window.onload = function() {
+  //imported jquery use .append() create li elements
+  let hangManState = document.body.querySelector(".hangman-state");
+  let resetButton = document.body.querySelector(".reset-game");
+  let nextWordButton = document.body.getElementsByClassName("next-word");
+  let userChoice = document.body.querySelector(".letters");
 
-let secretWord = ['ganondorf', 'zelda', 'link', 'pikachu', 'ryu',
-                'crash', 'mario','luigi', 'mega man','sonic','zero'];
+   
+  let secretWord = [
+    "zelda",
+    "link",
+    "pikachu",
+    "ryu",
+    "crash",
+    "mario",
+    "luigi",
+    "mega man",
+    "sonic",
+    "zero"
+  ];
 
+  let randomWord = () => {
+    randomWord =secretWord[Math.floor(Math.random()*secretWord.length)];
+    return randomWord;
+ }
+ 
+ console.log(randomWord())
 
-let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-          'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-          't', 'u', 'v', 'w', 'x', 'y', 'z'];
-//produces alphabet on screen
-    for(let i =0; i<alphabet.length; i++) {
-        $('.letters').append(`<li>${alphabet[i]}</li>`)
-        $('li').addClass('list');
-        // document.body.querySelector('.list').innerHTML = alphabet[i];
-        // console.log( alphabet[i])
+//   .split('')
 
-        
-        
-    }
-//includes() to evaluate boolean if the string contains a letter
-    const userChooseLetter = (e) => {
-    let letterChosen =(e.target).innerHTML
-    return letterChosen
-    }
+  let alphabet = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z"
+  ];
+  //produces alphabet on screen
+  for (let i = 0; i < alphabet.length; i++) {
+    $(".letters").append(`<li>${alphabet[i]}</li>`);
+    $("li").addClass("list");
+    // document.body.querySelector('.list').innerHTML = alphabet[i];
+    // console.log( alphabet[i])
+  }
+  //includes() to evaluate boolean if the string contains a letter
+  const userChooseLetter = e => {
+    let letterChosen = e.target.innerHTML;
+    console.log(letterChosen)
+    // if (letterChosen === secretWord) {
+    //     console.log('true')
+    // }
+  };
 
-    const resetGame = ()  => {
-        this.location.reload()
-    }
+  const resetGame = () => {
+    this.location.reload();
+  };
 
-    resetButton.addEventListener('click', resetGame)
-    userChoice.addEventListener('click', userChooseLetter )
-    
-
-
-
-    }
+  resetButton.addEventListener("click", resetGame);
+  userChoice.addEventListener("click", userChooseLetter);
+};
