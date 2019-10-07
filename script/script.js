@@ -76,34 +76,36 @@ for (let i = 0; i < alphabet.length; i++) {
 }
 
 //includes() to evaluate boolean if the string contains a letter
-console.log(wordInPlayArr)
+console.log(wordInPlayArr);
 const userChooseLetter = e => {
   let letterChosen = e.target.innerHTML;
   //   console.log(letterChosen);
-  
 
   for (x = 0; x < wordInPlayArr.length; x++) {
     if (letterChosen === wordInPlayArr[x]) {
       $(".list")[x].classList.remove("list-hidden");
 
       goodGuess++;
-      console.log(goodGuess);
+      console.log(`Good Guesses ${goodGuess}`);
       if (goodGuess === wordInPlayArr.length) {
         alert("you win");
+        resetGame();
       }
     } else {
       badGuess++;
-      console.log(badGuess);
+      console.log(`Bad Guesses ${badGuess}`);
       if (badGuess === wordInPlayArr.length) {
         badGuessCounter++;
-        console.log(badGuessCounter);
-        badGuess =0;
+        console.log(`Bad Guess Counter${badGuessCounter}`);
+        // badGuess =0;
         if (badGuessCounter > 6) {
           alert("you lost");
         }
       }
     }
   }
+  badGuess = 0;
+  e.target.remove();
 };
 
 const resetGame = () => {
