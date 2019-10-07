@@ -30,13 +30,17 @@ body {
   margin: 10px;
 }
 
-.main {
+#main {
   flex: 2;
   width: 700px;
   height: 30vh;
   background: rgb(174, 103, 233);
   margin: 10px;
-  
+}
+
+h1 {
+  font: 700;
+  font-size: 24px;
 }
 
 .nav {

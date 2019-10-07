@@ -4,12 +4,15 @@ let resetButton = document.body.querySelector(".reset-game");
 let nextWordButton = document.body.getElementsByClassName("next-word");
 let userChoice = document.body.querySelector(".letters");
 let solvedWord;
-let lives = 6;
+let lives = document.body.querySelector(".lives-message");
+let totalLives = 8;
 let win;
 let loss;
 let goodGuess = 0;
 let badGuess = 0;
 let badGuessCounter = 0;
+
+let canvas = document.body.querySelector('#main')
 
 let secretWord = [
   "zelda",
@@ -19,9 +22,14 @@ let secretWord = [
   "crash",
   "mario",
   "luigi",
-  "mega man",
+  "megaman",
   "sonic",
-  "zero"
+  "zero",
+  "ganondorf",
+  "dante",
+  "vergil",
+  "bison",
+
 ];
 let wordInPlay = "";
 const randomWord = () => {
@@ -97,9 +105,10 @@ const userChooseLetter = e => {
       if (badGuess === wordInPlayArr.length) {
         badGuessCounter++;
         console.log(`Bad Guess Counter${badGuessCounter}`);
-        // badGuess =0;
-        if (badGuessCounter > 6) {
+
+        if (badGuessCounter > 8) {
           alert("you lost");
+          resetGame();
         }
       }
     }
@@ -112,5 +121,12 @@ const resetGame = () => {
   this.location.reload();
 };
 
+comments = function() {
+  lives.innerHTML = "You have " + (8 - badGuessCounter) + " lives";
+};
 resetButton.addEventListener("click", resetGame);
-userChoice.addEventListener("click", userChooseLetter);
+
+userChoice.addEventListener("click", (e) => {
+    userChooseLetter(e)
+    comments(e)
+});
