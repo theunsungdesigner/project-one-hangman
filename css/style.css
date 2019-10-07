@@ -94,12 +94,17 @@ body {
 #input .my-word {
   margin: 0;
   padding: 0;
-  display: block;
+  display: inline;
   font: 1.5em;
 }
 
 .hidden {
   display: none;
+}
+#hold {
+  display: inline;
+  font: 800;
+  font-size: 24px;
 }
 
 #input .my-word li {
@@ -108,4 +113,9 @@ body {
   margin: 0;
   padding: 0 10px;
   font-size: 1.6em;
+}
+
+.my-word .list-hidden {
+
+color: white;
 }
