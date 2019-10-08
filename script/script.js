@@ -1,4 +1,4 @@
-//imported jquery use .append() create li elements
+
 let hangManState = document.body.querySelector(".hangman-state");
 let resetButton = document.body.querySelector(".reset-game");
 let nextWordButton = document.body.getElementsByClassName("next-word");
@@ -30,7 +30,7 @@ let secretWord = [
   "vergil",
   "bison"
 ];
-let wordInPlay = ""
+let wordInPlay = "";
 const randomWord = () => {
   wordInPlay = secretWord[Math.floor(Math.random() * secretWord.length)];
 };
@@ -41,10 +41,6 @@ wordInPlayArr.forEach(letter => {
   $(".my-word").append(`<li>${letter}</li>`);
 });
 $("li").addClass("list-hidden");
-
-
-
-
 
 // console.log(wordInPlayArr);
 
@@ -83,21 +79,17 @@ let alphabet = [
 for (let i = 0; i < alphabet.length; i++) {
   $(".letters").append(`<li>${alphabet[i]}</li>`);
   $("li").addClass("list");
-  // document.body.querySelector('.list').innerHTML = alphabet[i];
-  // console.log( alphabet[i])
-  
 }
-
-//includes() to evaluate boolean if the string contains a letter
+//sets up function for event listner when user picks a letter
 console.log(wordInPlayArr);
 const userChooseLetter = e => {
   let letterChosen = e.target.innerHTML;
-  //   console.log(letterChosen);
 
+  //lose megaman gif plays when condition met
   let lostState = () => {
     $("img").attr("src", "/resources/images/lose state.gif");
   };
-
+  //win megaman gif plays when condition met
   let winState = () => {
     $("img").attr("src", "/resources/images/win.gif");
   };
@@ -105,12 +97,9 @@ const userChooseLetter = e => {
   for (x = 0; x < wordInPlayArr.length; x++) {
     if (letterChosen === wordInPlayArr[x]) {
       $(".list")[x].classList.remove("list-hidden");
-    //   $('#my-word').append(`<li class='answer' data-id=${x}>${wordInPlayArr[x]}</li>`)
-    //   $(`.answer[data-id=${x}]`).text(`${alphabet[x]}`);
-        
-      
+
       goodGuess++;
-        console.log(`Good Guesses ${goodGuess}`);
+      console.log(`Good Guesses ${goodGuess}`);
       if (goodGuess === wordInPlayArr.length) {
         alert("you win");
         winState();
@@ -118,7 +107,7 @@ const userChooseLetter = e => {
       }
     } else {
       badGuess++;
-        console.log(`Bad Guesses ${badGuess}`);
+      console.log(`Bad Guesses ${badGuess}`);
       if (badGuess === wordInPlayArr.length) {
         badGuessCounter++;
         console.log(`Bad Guess Counter${badGuessCounter}`);
