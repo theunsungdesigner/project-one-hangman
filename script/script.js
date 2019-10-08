@@ -28,7 +28,14 @@ let secretWord = [
   "ganondorf",
   "dante",
   "vergil",
-  "bison"
+  "bison",
+  "bowser",
+  "peach",
+  "toad",
+  "starfox",
+  "vile",
+  "sigma",
+  "protoman"
 ];
 let wordInPlay = "";
 const randomWord = () => {
