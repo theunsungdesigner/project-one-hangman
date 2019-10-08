@@ -12,13 +12,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   
-  opacity: unset;
 }
 .container {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-evenly;
   background: lightgray;
 }
@@ -37,14 +37,16 @@ body {
 
 #main {
   flex: 2;
-  width: 700px;
-  height: 30vh;
+  width: 600px;
+  /* height: 100%; */
   background: rgb(174, 103, 233);
   margin: 10px;
 }
 
 img {
-  width: 200px;
+  width: 300px;
+  height: 300px;
+
 }
 
 .lose {
@@ -54,6 +56,7 @@ img {
 h1 {
   font: 700;
   font-size: 24px;
+  padding: 20px;
 }
 
 .nav {
@@ -112,6 +115,8 @@ h1 {
   text-align: center;
   display: block;
   padding: 10px;
+  background: rgb(71, 92, 209);
+  opacity: 50%;
 }
 
 #input .my-word {
@@ -148,6 +153,7 @@ h1 {
   padding: 10px;
   font-size: 24;
   line-height: 24px;
+  width: 45px;
   background: white;
   margin-right: 25px;
   margin-left:  25px;
