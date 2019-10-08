@@ -59,6 +59,10 @@ h1 {
 .nav {
   width: 100px;
   margin: 10px;
+  justify-items: center;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .reset-game button {
@@ -67,6 +71,7 @@ h1 {
   margin: 10px;
   padding: 2px;
   width: 30%;
+ 
 }
 
 .next-word button {
@@ -134,7 +139,8 @@ h1 {
 }
 
 .my-word {
-  padding: 20px;
+  padding: 10px;
+  background: rgb(174, 103, 233);
 }
 
 .my-word .list {
@@ -143,14 +149,16 @@ h1 {
   font-size: 24;
   line-height: 24px;
   background: white;
-  margin: 25px;
+  margin-right: 25px;
+  margin-left:  25px;
   
 }
 
 .my-word .list-hidden {
   /* display: none; */
   font-size: 24px;   
-  margin: 25px;
+  margin-left:  25px;
+  margin-right:  25px;
   width: 45px;
   outline-style: dotted black;
   background: rgb(70, 66, 66);
