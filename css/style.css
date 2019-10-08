@@ -118,7 +118,7 @@ h1 {
   background: rgba(71, 92, 209, .8);
   
 }
-
+/* definitely gonna have to refactor the CSS */
 #input .my-word {
   margin: 0;
   padding: 0;
