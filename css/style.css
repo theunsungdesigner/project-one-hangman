@@ -115,8 +115,8 @@ h1 {
   text-align: center;
   display: block;
   padding: 10px;
-  background: rgb(71, 92, 209);
-  opacity: 50%;
+  background: rgba(71, 92, 209, .8);
+  
 }
 
 #input .my-word {
@@ -133,6 +133,7 @@ h1 {
   display: inline;
   font: 800;
   font-size: 24px;
+  
 }
 
 #input .my-word li {
@@ -145,7 +146,8 @@ h1 {
 
 .my-word {
   padding: 10px;
-  background: rgb(174, 103, 233);
+  background: rgba(174, 103, 233, .8);
+  
 }
 
 .my-word .list {
@@ -169,6 +171,14 @@ h1 {
   outline-style: dotted black;
   background: rgb(70, 66, 66);
   color: rgb(70, 66, 66);
+  webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+  
 }
 
 .my-word .list-hidden li{
