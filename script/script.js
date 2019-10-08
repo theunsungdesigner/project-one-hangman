@@ -110,7 +110,10 @@ const userChooseLetter = e => {
       if (goodGuess === wordInPlayArr.length) {
         alert("you win");
         winState();
-        // resetGame();
+        setTimeout(() => {
+            resetGame();
+        }, 6000);
+        
       }
     } else {
       badGuess++;
@@ -122,7 +125,10 @@ const userChooseLetter = e => {
         if (badGuessCounter > 8) {
           alert("sorry you lose");
           lostState();
-          //   resetGame();
+          setTimeout(() => {
+            resetGame();    
+          }, 4000);
+          
         }
       }
     }
