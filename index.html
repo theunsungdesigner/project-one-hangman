@@ -1,65 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <aside class="aside">
-        <h1 class="instructions">
-          Instructions
-        </h1>
-        <p class="paragraph-style">
-          This game allows the user to input letters in a guessing game at a
-          word. If the user's letter return hangman will return your letter in the input field.  If the users input returns false then it will apear in the bottom
-          text box.
-        </p>
-      </aside>
-      <canvas id="main">
+        <aside class="aside">
+            <h1 class="instructions">
+                Instructions
+            </h1>
+            <p class="paragraph-style">
+                This game allows the user to input letters in a guessing game at a
+                word. If the user's letter return hangman will return your letter in the input field. If the users input
+                returns false then it will apear in the bottom
+                text box.
+            </p>
+        </aside>
+        <canvas id="main">
+
+        </canvas>
         <h1>Hang Man</h1>
-    </canvas>>
+        </main>
+        <nav class="nav">
+            <input class="reset-game" type="button" value="reset game"></input>
 
-      </main>
-      <nav class="nav">
-        <input class="reset-game" type="button" value="reset game"></input>
 
-        
-      </nav>
+        </nav>
 
-      <div class="letter-output-field">
+        <div class="letter-output-field">
 
-      </div>
-      <div id="input">
-        <p class="lives-message">
-          
-        </p>
-       
-      </div>
+        </div>
+        <div id="input">
+            <p class="lives-message">
+
+            </p>
+
+        </div>
     </div>
     <div id="hold">
-            <ul class="my-word">
-           
-            </ul>
-            </div> 
+        <ul class="my-word">
 
-    <div id="alphabet">
-      
-      <ul class="letters">
-      </ul>
+        </ul>
     </div>
 
-    <footer class="footer">
-      <p class="social-media-links"></p>
-    </footer>
+    <div id="alphabet">
 
+        <ul class="letters">
+        </ul>
+    </div>
     <script defer src="script/script.js"></script>
-    
-  </body>
+
+</body>
+
 </html>
 
 
