@@ -41,7 +41,9 @@ wordInPlayArr.forEach(letter => {
   $(".my-word").append(`<li>${letter}</li>`);
 });
 $("li").addClass("list-hidden");
-$(".list-hidden").html("_");
+
+
+
 
 
 // console.log(wordInPlayArr);
@@ -83,6 +85,7 @@ for (let i = 0; i < alphabet.length; i++) {
   $("li").addClass("list");
   // document.body.querySelector('.list').innerHTML = alphabet[i];
   // console.log( alphabet[i])
+  
 }
 
 //includes() to evaluate boolean if the string contains a letter
@@ -102,6 +105,9 @@ const userChooseLetter = e => {
   for (x = 0; x < wordInPlayArr.length; x++) {
     if (letterChosen === wordInPlayArr[x]) {
       $(".list")[x].classList.remove("list-hidden");
+    //   $('#my-word').append(`<li class='answer' data-id=${x}>${wordInPlayArr[x]}</li>`)
+    //   $(`.answer[data-id=${x}]`).text(`${alphabet[x]}`);
+        
       
       goodGuess++;
         console.log(`Good Guesses ${goodGuess}`);
