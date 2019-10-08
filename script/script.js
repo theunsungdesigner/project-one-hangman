@@ -12,7 +12,7 @@ let goodGuess = 0;
 let badGuess = 0;
 let badGuessCounter = 0;
 
-let canvas = document.body.querySelector('#main')
+let canvas = document.body.querySelector("#main");
 
 let secretWord = [
   "zelda",
@@ -28,10 +28,9 @@ let secretWord = [
   "ganondorf",
   "dante",
   "vergil",
-  "bison",
-
+  "bison"
 ];
-let wordInPlay = "";
+let wordInPlay = ""
 const randomWord = () => {
   wordInPlay = secretWord[Math.floor(Math.random() * secretWord.length)];
 };
@@ -40,8 +39,11 @@ randomWord();
 let wordInPlayArr = wordInPlay.split("");
 wordInPlayArr.forEach(letter => {
   $(".my-word").append(`<li>${letter}</li>`);
-  $("li").addClass("list-hidden");
 });
+$("li").addClass("list-hidden");
+$(".list-hidden").html("_");
+
+
 // console.log(wordInPlayArr);
 
 //  let displayRandomWord = $(".my-word").append(`<li></li>`)
@@ -89,26 +91,36 @@ const userChooseLetter = e => {
   let letterChosen = e.target.innerHTML;
   //   console.log(letterChosen);
 
+  let lostState = () => {
+    $("img").attr("src", "/resources/images/lose state.gif");
+  };
+
+  let winState = () => {
+    $("img").attr("src", "/resources/images/win.gif");
+  };
+
   for (x = 0; x < wordInPlayArr.length; x++) {
     if (letterChosen === wordInPlayArr[x]) {
       $(".list")[x].classList.remove("list-hidden");
-
+      
       goodGuess++;
-      console.log(`Good Guesses ${goodGuess}`);
+        console.log(`Good Guesses ${goodGuess}`);
       if (goodGuess === wordInPlayArr.length) {
         alert("you win");
-        resetGame();
+        winState();
+        // resetGame();
       }
     } else {
       badGuess++;
-      console.log(`Bad Guesses ${badGuess}`);
+        console.log(`Bad Guesses ${badGuess}`);
       if (badGuess === wordInPlayArr.length) {
         badGuessCounter++;
         console.log(`Bad Guess Counter${badGuessCounter}`);
 
         if (badGuessCounter > 8) {
-          alert("you lost");
-          resetGame();
+          alert("sorry you lose");
+          lostState();
+          //   resetGame();
         }
       }
     }
@@ -126,7 +138,7 @@ comments = function() {
 };
 resetButton.addEventListener("click", resetGame);
 
-userChoice.addEventListener("click", (e) => {
-    userChooseLetter(e)
-    comments(e)
+userChoice.addEventListener("click", e => {
+  userChooseLetter(e);
+  comments(e);
 });

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>Document</title>
+    <title>Super Hangman(Snes)</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
@@ -17,16 +17,16 @@
                 Instructions
             </h1>
             <p class="paragraph-style">
-                This game allows the user to input letters in a guessing game at a
-                word. If the user's letter return hangman will return your letter in the input field. If the users input
-                returns false then it will apear in the bottom
-                text box.
+                This game allows the user to input letters in a guessing game for video game characters. If the user's letter returns incorrect, the letter will be removed from input field. If the users input
+                returns true it will appear under Mega Man!
+            
             </p>
         </aside>
-        <canvas id="main">
-
-        </canvas>
-        <h1>Hang Man</h1>
+        <picture id="main">
+            <img class="start" src="/resources/images/running.gif" alt="">
+            <img class="lose"  src="/resources/images/death animation.gif" alt="megaman dies">
+        </picture>
+        <h1>Mega Hang Man</h1>
         </main>
         <nav class="nav">
             <input class="reset-game" type="button" value="reset game"></input>

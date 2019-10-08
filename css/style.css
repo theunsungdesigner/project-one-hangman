@@ -8,6 +8,11 @@
 
 body {
   text-align: center;
+  background-image: url(/resources/images/18721.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  opacity: unset;
 }
 .container {
   max-width: 1000px;
@@ -36,6 +41,14 @@ body {
   height: 30vh;
   background: rgb(174, 103, 233);
   margin: 10px;
+}
+
+img {
+  width: 200px;
+}
+
+.lose {
+  display: none;
 }
 
 h1 {
@@ -75,7 +88,7 @@ h1 {
   width: 35px;
   height: 35px;
   padding: 10px;
-  background: rgba(147, 222, 252, 0.651);
+  background: rgb(174, 103, 233);
   color: rgb(255, 255, 255);
   text-align: center;
   font-weight: 700;
@@ -93,6 +106,7 @@ h1 {
   font-size: 1.6em;
   text-align: center;
   display: block;
+  padding: 10px;
 }
 
 #input .my-word {
@@ -119,13 +133,19 @@ h1 {
   font-size: 1.6em;
 }
 
+.my-word {
+  padding: 20px;
+}
+
 .my-word .list {
   display: inline-block;
   padding: 10px;
   font-size: 2em;
+  line-height: 24px;
+  background: lightgray;
 }
 
 .my-word .list-hidden {
-display: inline;
-color: white;
+  /* display: none; */
+  font-size: 24px;
 }
