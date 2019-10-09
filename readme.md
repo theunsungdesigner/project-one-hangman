@@ -9,7 +9,7 @@ Created work flow by developing basic project management skills such as whiteboa
 ## Wire Frames
 ==========================================================================
 
-<img src="https://github.com/theunsungdesigner/project-one-hangman/blob/master/resources/images/wireframe2.jpg"/>
+<img src="https://github.com/theunsungdesigner/project-one-hangman/blob/master/resources/images/wireframe2.png"/>
 <img src="https://github.com/theunsungdesigner/project-one-hangman/blob/master/resources/images/wireframe1.jpg"/>
 
 ## Trello board
