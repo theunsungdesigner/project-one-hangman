@@ -415,6 +415,11 @@ button.reset-game :hover {
     width: 2em;
     height: 1.8em;
 }
+
+.letters{
+  margin-left: 30px;
+}
+
 .letters li {
   float: left;
   margin: 8px 8px 0px 7px;
