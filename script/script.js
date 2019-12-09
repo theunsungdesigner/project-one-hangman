@@ -5,7 +5,7 @@ let nextWordButton = document.body.getElementsByClassName("next-word");
 let userChoice = document.body.querySelector(".letters");
 let solvedWord;
 let lives = document.body.querySelector(".lives-message");
-let totalLives = 8;
+let totalLives = 5;
 let win;
 let loss;
 let goodGuess = 0;
@@ -41,6 +41,7 @@ let secretWord = [
 let wordInPlay = "";
 const randomWord = () => {
   wordInPlay = secretWord[Math.floor(Math.random() * secretWord.length)];
+ 
 };
 randomWord();
 
@@ -83,6 +84,18 @@ let alphabet = [
   "y",
   "z"
 ];
+function renderHeart() {
+    
+  $(".lives-message").html("")
+  for(let j = 0; j< totalLives; j++) {
+    $(".lives-message").append('<img class="heart" src="/resources/images/hearttank.gif" />');
+
+ } 
+ 
+
+}
+renderHeart();
+
 //produces alphabet on screen
 for (let i = 0; i < alphabet.length; i++) {
   $(".letters").append(`<li>${alphabet[i]}</li>`);
@@ -120,10 +133,16 @@ const userChooseLetter = e => {
       badGuess++;
       console.log(`Bad Guesses ${badGuess}`);
       if (badGuess === wordInPlayArr.length) {
+        
         badGuessCounter++;
-        console.log(`Bad Guess Counter${badGuessCounter}`);
+        totalLives -= 1;
 
-        if (badGuessCounter > 8) {
+        console.log(`Bad Guess Counter${badGuessCounter}`);
+        // if (false ) {
+        //   console.log('why')
+        // }
+
+        if (badGuessCounter > 5) {
           alert("sorry you lose");
           lostState();
           setTimeout(() => {
@@ -134,18 +153,27 @@ const userChooseLetter = e => {
       }
     }
   }
+  
   badGuess = 0;
   e.target.remove();
+  renderHeart()
+  //js method to remove hearts
 };
 
 const resetGame = () => {
   this.location.reload();
 };
 
+ 
+
 
 
 comments = function() {
-  lives.innerHTML = "You have " + (8 - badGuessCounter) + " lives";
+  // for(let j = 0; j< totalLives; j++) {
+  //    $(".lives-message").append('<img class="heart" src="/resources/images/hearttank.gif" />');
+  // } 
+  
+  // lives.innerHTML = "You have " + (8 - badGuessCounter) + " lives";
 };
 resetButton.addEventListener("click", resetGame);
 

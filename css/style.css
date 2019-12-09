@@ -64,7 +64,10 @@ img {
   width: 300px;
   height: 300px;
 }
-
+img.heart {
+  width: 4.5em;
+  height: 2.5em;
+}
 .lose {
   display: none;
 }
