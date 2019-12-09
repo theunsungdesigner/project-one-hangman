@@ -12,6 +12,7 @@ let goodGuess = 0;
 let badGuess = 0;
 let badGuessCounter = 0;
 
+
 let canvas = document.body.querySelector("#main");
 
 let secretWord = [
@@ -140,6 +141,8 @@ const userChooseLetter = e => {
 const resetGame = () => {
   this.location.reload();
 };
+
+
 
 comments = function() {
   lives.innerHTML = "You have " + (8 - badGuessCounter) + " lives";
