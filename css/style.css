@@ -6,6 +6,7 @@
   padding: 0;
 }
 
+
 body {
   text-align: center;
   background-image: url(/resources/images/18721.jpg);
@@ -279,4 +280,180 @@ button.reset-game :hover {
     max-width: 100%;
     font-family: "Press Start 2P", cursive;
   }
+}
+
+  @media only screen and (max-width: 920px) {
+  body {
+    text-align: center;
+    background-image: url(/resources/images/18721.jpg);
+    height: auto;
+    background-repeat: repeat-y;
+    background-size: cover;
+    padding: 10px;
+  }
+
+  .container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background: lightgray;
+  }
+  .paragraph-style {
+    font-size: 14;
+  }
+
+  .aside {
+    flex: 1;
+    width: 200px;
+    background: rgba(196, 183, 211, 0.877);
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .reset-game button {
+    color: white;
+    background: green;
+    margin: 10px;
+    padding: 2px;
+    width: 30%;
+  }
+  
+
+
+
+  #input .lives-message {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  
+
+  #alphabet .letters li {
+    float: left;
+    margin: 27px 28px 2px 8PX;
+    list-style: none;
+    width: 69px;
+    height: 56px;
+    padding: 10px;
+    background: rgb(174, 103, 233);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 700;
+  }
+
+
+  .my-word .list-hidden {
+    /* display: none; */
+    font-size: 18px;
+    /* margin-left: 25px;
+    margin-right: 25px; */
+    /* width: 45px; */
+    outline-style: dotted black;
+    background: rgb(70, 66, 66);
+    color: rgb(70, 66, 66);
+    webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+  }
+
+  #alphabet .letters .list {
+    align-items: center;
+    font-family: "Press Start 2P", cursive;
+    padding: 0;
+    max-width: 100%;
+    font-family: "Press Start 2P", cursive;
+  }
+  
+}
+@media only screen and (max-width: 450px) {
+  body {
+    text-align: center;
+    background-image: url(/resources/images/18721.jpg);
+    height: auto;
+    background-repeat: repeat-y;
+    background-size: cover;
+    padding: 10px;
+  }
+
+  .container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background: lightgray;
+  }
+  .paragraph-style {
+    font-size: 14;
+  }
+
+  .aside {
+    flex: 1;
+    width: 200px;
+    background: rgba(196, 183, 211, 0.877);
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .reset-game button {
+    color: white;
+    background: green;
+    margin: 10px;
+    padding: 2px;
+    width: 30%;
+  }
+  
+  img.heart {
+    width: 2em;
+    height: 1.8em;
+}
+.letters li {
+  float: left;
+  margin: 8px 8px 0px 7px;
+  list-style: none;
+  width: 33px;
+  height: 34px;
+  padding: 5px;
+  background: rgb(174, 103, 233);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: 700;
+
+}
+
+#alphabet .letters li {
+  float: left;
+  margin: 27px 28px 2px 8PX;
+  list-style: none;
+  width: 33px;
+  height: 34px;
+  padding: 5px;
+  background: rgb(174, 103, 233);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: 700;
+
+}
+
+.my-word .list-hidden {
+  margin-left: 8px;
+  margin-right: 8px;
+  width: 30px;
+  height: 32px;
+}
+
+.my-word .list {
+  margin: 8px;
+  width: 40px;
+  height: 40px;
+}
+
 }
