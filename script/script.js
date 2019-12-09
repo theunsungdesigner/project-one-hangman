@@ -51,11 +51,6 @@ wordInPlayArr.forEach(letter => {
 });
 $("li").addClass("list-hidden");
 
-// console.log(wordInPlayArr);
-
-//  let displayRandomWord = $(".my-word").append(`<li></li>`)
-//  console.log(displayRandomWord)
-
 let alphabet = [
   "a",
   "b",
@@ -138,9 +133,7 @@ const userChooseLetter = e => {
         totalLives -= 1;
 
         console.log(`Bad Guess Counter${badGuessCounter}`);
-        // if (false ) {
-        //   console.log('why')
-        // }
+      
 
         if (badGuessCounter > 5) {
           alert("sorry you lose");
@@ -157,7 +150,6 @@ const userChooseLetter = e => {
   badGuess = 0;
   e.target.remove();
   renderHeart()
-  //js method to remove hearts
 };
 
 const resetGame = () => {
@@ -168,13 +160,7 @@ const resetGame = () => {
 
 
 
-comments = function() {
-  // for(let j = 0; j< totalLives; j++) {
-  //    $(".lives-message").append('<img class="heart" src="/resources/images/hearttank.gif" />');
-  // } 
-  
-  // lives.innerHTML = "You have " + (8 - badGuessCounter) + " lives";
-};
+
 resetButton.addEventListener("click", resetGame);
 
 userChoice.addEventListener("click", e => {
