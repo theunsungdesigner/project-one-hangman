@@ -11,10 +11,9 @@ body {
   background-image: url(/resources/images/18721.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 .container {
-  max-width: 1000px;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -41,12 +40,19 @@ body {
   /* height: 100%; */
   background: rgb(174, 103, 233);
   margin: 10px;
+  padding: 10px;
+}
+.title {
+  font: 800;
+  width: 100%;
+  padding: 10px;
+  display: block;
+  float: left;
 }
 
 img {
   width: 300px;
   height: 300px;
-
 }
 
 .lose {
@@ -56,7 +62,6 @@ img {
 h1 {
   font: 700;
   font-size: 24px;
-  padding: 20px;
 }
 
 .nav {
@@ -68,13 +73,17 @@ h1 {
   padding: 10px;
 }
 
-.reset-game button {
+button.reset-game {
   color: white;
-  background: green;
-  margin: 10px;
-  padding: 2px;
-  width: 30%;
- 
+  background: rgba(130, 52, 233, 0.897);
+  /* margin: 10px; */
+  padding: 10px;
+  width: 135%;
+  font-size: 14px;
+}
+
+button.reset-game :hover {
+  background-color: rgb(174, 103, 233);
 }
 
 .next-word button {
@@ -115,8 +124,7 @@ h1 {
   text-align: center;
   display: block;
   padding: 10px;
-  background: rgba(71, 92, 209, .8);
-  
+  background: rgba(71, 92, 209, 0.8);
 }
 /* definitely gonna have to refactor the CSS */
 #input .my-word {
@@ -133,7 +141,6 @@ h1 {
   display: inline;
   font: 800;
   font-size: 24px;
-  
 }
 
 #input .my-word li {
@@ -146,8 +153,7 @@ h1 {
 
 .my-word {
   padding: 10px;
-  background: rgba(174, 103, 233, .8);
-  
+  background: rgba(174, 103, 233, 0.8);
 }
 
 .my-word .list {
@@ -158,29 +164,83 @@ h1 {
   width: 45px;
   background: white;
   margin-right: 25px;
-  margin-left:  25px;
-  
+  margin-left: 25px;
 }
 
 .my-word .list-hidden {
   /* display: none; */
-  font-size: 24px;   
-  margin-left:  25px;
-  margin-right:  25px;
+  font-size: 24px;
+  margin-left: 25px;
+  margin-right: 25px;
   width: 45px;
   outline-style: dotted black;
   background: rgb(70, 66, 66);
   color: rgb(70, 66, 66);
   webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
-  
 }
 
-.my-word .list-hidden li{
+.my-word .list-hidden li {
   padding: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    text-align: center;
+    background-image: url(/resources/images/18721.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background: lightgray;
+  }
+  .paragraph-style {
+    font-size: 14;
+  }
+
+  .aside {
+    flex: 1;
+    width: 200px;
+    background: rgba(196, 183, 211, 0.877);
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .reset-game button {
+    color: white;
+    background: green;
+    margin: 10px;
+    padding: 2px;
+    width: 30%;
+  }
+
+  .my-word .list-hidden {
+    /* display: none; */
+    font-size: 24px;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 45px;
+    outline-style: dotted black;
+    background: rgb(70, 66, 66);
+    color: rgb(70, 66, 66);
+    webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+  }
 }
