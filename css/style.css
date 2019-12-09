@@ -11,6 +11,7 @@ body {
   background-image: url(/resources/images/18721.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: auto;
 }
 .container {
   max-width: 800px;
@@ -20,6 +21,7 @@ body {
   flex-flow: row wrap;
   justify-content: space-evenly;
   background: lightgray;
+  
 }
 
 .paragraph-style {
@@ -32,6 +34,11 @@ body {
   background: rgba(196, 183, 211, 0.877);
   padding: 10px;
   margin: 10px;
+  
+    
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+  
 }
 
 #main {
@@ -41,13 +48,20 @@ body {
   background: rgb(174, 103, 233);
   margin: 10px;
   padding: 10px;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
 }
 .title {
+  
   font: 800;
   width: 100%;
   padding: 10px;
   display: block;
   float: left;
+}
+
+.title h1 {
+  font-family: 'Press Start 2P', cursive;
 }
 
 img {
@@ -79,7 +93,8 @@ button.reset-game {
   /* margin: 10px; */
   padding: 10px;
   width: 135%;
-  font-size: 14px;
+  font-size: 10px;
+  font-family: 'Press Start 2P', cursive;
 }
 
 button.reset-game :hover {
@@ -109,6 +124,8 @@ button.reset-game :hover {
   color: rgb(255, 255, 255);
   text-align: center;
   font-weight: 700;
+  padding: 10px;
+  box-shadow: 2px 4px #888888;
 }
 
 #alphabet .letters li:hover {
@@ -189,12 +206,14 @@ button.reset-game :hover {
   padding: 10px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 920px) {
   body {
     text-align: center;
     background-image: url(/resources/images/18721.jpg);
-    background-repeat: no-repeat;
+    height: auto;
+    background-repeat: repeat-y;
     background-size: cover;
+    padding: 10px;
   }
 
   .container {
@@ -228,10 +247,10 @@ button.reset-game :hover {
 
   .my-word .list-hidden {
     /* display: none; */
-    font-size: 24px;
-    margin-left: 25px;
-    margin-right: 25px;
-    width: 45px;
+    font-size: 18px;
+    /* margin-left: 25px;
+    margin-right: 25px; */
+    /* width: 45px; */
     outline-style: dotted black;
     background: rgb(70, 66, 66);
     color: rgb(70, 66, 66);
@@ -242,5 +261,13 @@ button.reset-game :hover {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Opera and Firefox */
+
+  }
+
+  #alphabet .letters .list {
+    align-items: center;
+
+    padding: 0;
+    max-width: 100%;
   }
 }
