@@ -51,7 +51,7 @@ wordInPlayArr.forEach(letter => {
 });
 $("li").addClass("list-hidden");
 
-let alphabet = [
+var alphabet = [
   "a",
   "b",
   "c",
