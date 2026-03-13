@@ -1,0 +1,11 @@
+{
+  "name": "project-one-hangman",
+  "version": "1.0.0",
+  "description": "Mega Hang Man - a browser-based hangman game",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
